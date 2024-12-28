@@ -1,0 +1,19 @@
+<div class="secondary-toolbar shadow-b py-1 border-t flex">
+    <div class="px-gutter flex items-center flex-auto">
+        <h1 class="subheading-2 font-medium m-0 ltr:pr-3 rtl:pl-3 ltr:border-r rtl:border-l ltr:mr-3 rtl:ml-3 flex-none">Medicamentos</h1>
+    </div>    
+</div>
+
+<div class="flex flex-col sm:flex-col md:flex-row gap-4 py-4">
+    <!-- Listado de medicamentos -->
+    <div class="w-full">
+        <pharmaceuticals-list [pharmaList]="pharmaceuticals"></pharmaceuticals-list>
+    </div>
+    <!-- Fin Listado de medicamentos -->
+
+    <!-- Formulario -->
+    <div class="w-full">
+        <add-pharmaceuticals (onNewDrug)="onNewDrug($event)"></add-pharmaceuticals>
+    </div>
+    <!-- Fin formulario -->
+</div>

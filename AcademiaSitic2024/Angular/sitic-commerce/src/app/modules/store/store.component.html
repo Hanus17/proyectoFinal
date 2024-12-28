@@ -1,0 +1,65 @@
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
+<div class="h-full flex flex-col bg-gray-100">
+  <!-- Sección de encabezado -->
+  <header class="bg-blue-600 text-white p-6 shadow-lg">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold">SITIC-COMMERCE</h1>
+      <p class="text-lg mt-2">¡Bienvenido a tu tienda online de confianza!</p>
+    </div>
+  </header>
+
+  <!-- Hero Section sin imagen de fondo -->
+  <section class="h-64 flex items-center justify-center bg-blue-100">
+    <div class="text-center p-8 rounded-lg">
+      <h2 class="text-5xl font-bold text-gray-800">Tu destino para tecnología y más</h2>
+      <p class="text-xl mt-4 text-gray-600">Encuentra productos de alta calidad a los mejores precios.</p>
+      <a href="/products" class="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 inline-block">
+        Explorar productos
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección de presentación -->
+  <div class="py-12 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-800">¿Qué ofrecemos?</h2>
+      <p class="mt-4 text-lg text-gray-600">
+        En <strong>SITIC-COMMERCE</strong>, nos especializamos en brindarte una experiencia de compra única, con productos seleccionados cuidadosamente y un servicio excepcional.
+    </p>
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
+      <div class="p-6 shadow-md rounded-lg">
+        <img src="https://iontec.mx/cdn/shop/products/81qFsy0lP4L._AC_SL1500_1200x1200.jpg?v=1603538643" alt="Tecnología" class="mx-auto">
+        <h3 class="text-xl font-semibold mt-4">Tecnología</h3>
+        <p class="text-gray-600 mt-2">Los últimos gadgets y dispositivos para tu día a día.</p>
+      </div>
+      <div class="p-6 shadow-md rounded-lg">
+        <img src="https://www.chio-lecca.edu.pe/cdn/shop/articles/chio-lecca-blog-estilo-y-moda.jpg?v=1673918894" alt="Moda" class="mx-auto">
+        <h3 class="text-xl font-semibold mt-4">Moda</h3>
+        <p class="text-gray-600 mt-2">Estilo y comodidad para cada ocasión.</p>
+      </div>
+      <div class="p-6 shadow-md rounded-lg">
+        <img src="https://media.admagazine.com/photos/618a668ab94700461d6213eb/master/w_1600%2Cc_limit/68287.jpg" alt="Hogar" class="mx-auto">
+        <h3 class="text-xl font-semibold mt-4">Hogar</h3>
+        <p class="text-gray-600 mt-2">Productos para hacer de tu casa un hogar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de productos -->
+  <div id="productos" class="py-12 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-800">Nuestros productos</h2>
+      <p class="mt-4 text-lg text-gray-600">
+        Explora nuestra amplia variedad de productos seleccionados para ti.
+      </p>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-6">
+        <!-- Aquí se mostrarían los productos -->
+        <product-card *ngFor="let product of productList"></product-card>
+      </div>
+    </div>
+  </div>
+
+</div>
+

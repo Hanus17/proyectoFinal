@@ -1,0 +1,19 @@
+<div class="p-4">
+    <div class="subheading-2">Listado</div>
+
+    <div *ngFor="let item of pharmaList" class="border-b px-4 relative select-none block no-underline text-dark">
+        <div class="flex items-center gap-4">
+            <div class="overflow-hidden flex-auto">
+                <div class="body-2">
+                    {{ item.name | uppercase }}
+                </div>
+                <div class="body-1 text-secondary">${{ item.price | number:'.2' }}</div>
+            </div>
+            <div class="flex-none flex flex-col items-end justify-center">
+                <div [class]="item.type | epharmaTypeClass" class="rounded px-2 py-1 font-medium flex-none">
+                    {{ EPharmaType[item.type] }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

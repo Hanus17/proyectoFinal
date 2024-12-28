@@ -1,0 +1,28 @@
+<div class="p-4">
+    <div class="subheading-2">Agregar Medicamento</div>
+    <form (ngSubmit)="emitDrug()">
+        <mat-form-field class="w-full">
+            <mat-label>Nombre</mat-label>
+            <input [(ngModel)]="drug.name" matInput name="nombre">
+        </mat-form-field>
+
+        <mat-form-field class="w-full">
+            <mat-label>Precio</mat-label>
+            <input [(ngModel)]="drug.price" matInput name="precio">
+        </mat-form-field>
+
+        <mat-select [(ngModel)]="drug.type" name="tipo" class="w-full">
+            <mat-option *ngFor="let type of pharmaTypes" 
+                [value]="type.value">
+                {{ type.name }}
+            </mat-option>
+        </mat-select>
+
+        <button type="submit" mat-raised-button color="primary" class="w-full my-2">
+            <mat-icon svgIcon="mat:add" class="icon-base" inline="true"></mat-icon>
+            Agregar
+        </button>
+
+        <pre>{{ drug | json }}</pre>
+    </form>
+</div>
